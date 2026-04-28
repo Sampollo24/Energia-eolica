@@ -20,7 +20,7 @@ st.sidebar.header("Parámetros del Viento")
 velocidad = st.sidebar.slider("Velocidad del viento (m/s)", 0.0, 30.0, 10.0)
 
 # 🔹 Cargar datos
-df = pd.read_csv('Energia_eolica_ODS7.csv')
+df = pd.read_csv('Eolica_ODS7.csv')
 
 # 🔹 Selección de variables
 X = df['Velocidad_Viento_ms']
