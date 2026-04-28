@@ -33,11 +33,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random
 LR = LinearRegression()
 LR.fit(X_train,y_train)
 # 🔹 Función de predicción (LO QUE TE PIDEN)
-def predecir_energia(velocidad_viento):
-    return model.predict([[velocidad_viento]])[0]
-
-# 🔹 Predicción en tiempo real
-energia = predecir_energia(velocidad)
+# Hacemos la predicción con el modelo y la temperatura seleccionada por el usuario
+b1 = LR.coef_
+b0 = LR.intercept_
+prediccion = b0 + b1[0]*velocidad
 
 # 🔹 Resultados
 st.subheader('Energía generada')
