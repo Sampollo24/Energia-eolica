@@ -27,11 +27,11 @@ X = df[['Velocidad_Viento_ms']]
 y = df['Eficiencia_Energetica_kWh']
 
 # 🔹 Modelo
+from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-
-model = LinearRegression()
-model.fit(X, y)
-
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
+LR = LinearRegression()
+LR.fit(X_train,y_train)
 # 🔹 Función de predicción (LO QUE TE PIDEN)
 def predecir_energia(velocidad_viento):
     return model.predict([[velocidad_viento]])[0]
