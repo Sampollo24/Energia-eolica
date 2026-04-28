@@ -43,9 +43,9 @@ st.subheader('Energía generada')
 st.write(f'La turbina produciría aproximadamente: {prediccion:.2f} kWh')
 
 # 🔹 Interpretación simple
-if energia < 150:
+if prediccion < 150:
     st.warning("Producción baja")
-elif energia < 300:
+elif prediccion < 300:
     st.info("Producción moderada")
 else:
     st.success("Alta producción de energía")
