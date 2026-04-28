@@ -23,7 +23,7 @@ velocidad = st.sidebar.slider("Velocidad del viento (m/s)", 0.0, 30.0, 10.0)
 df = pd.read_csv('Energia_eolica_ODS7.csv')
 
 # 🔹 Selección de variables
-X = df[['Velocidad_Viento_ms']]
+X = df['Velocidad_Viento_ms']
 y = df['Eficiencia_Energetica_kWh']
 
 # 🔹 Modelo
