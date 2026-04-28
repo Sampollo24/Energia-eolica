@@ -40,7 +40,7 @@ prediccion = b0 + b1[0]*velocidad
 
 # 🔹 Resultados
 st.subheader('Energía generada')
-st.write(f'La turbina produciría aproximadamente: {energia:.2f} kWh')
+st.write(f'La turbina produciría aproximadamente: {prediccion:.2f} kWh')
 
 # 🔹 Interpretación simple
 if energia < 150:
